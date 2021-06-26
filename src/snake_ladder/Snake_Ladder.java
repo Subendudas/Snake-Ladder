@@ -21,7 +21,17 @@ public class Snake_Ladder
 			break;
 		case ladder:
 			player_position += die;
-			System.out.println("Hurray! Ladder Climb Go To "+player_position+ " Position.");
+			if (player_position > 100) 
+			{
+				player_position -= die;
+					System.out.println("Stay At Previous "+player_position+"th Position Because You Went Ahead 100th Position.");
+				} 
+			else 
+			{
+				
+				System.out.println("Hurray! Ladder Climb Go "+player_position+ " Position Up.");
+			}
+			//System.out.println("Hurray! Ladder Climb Go "+player_position+ " Position Up.");
 			break;
 		case snake:
 			player_position -= die;
@@ -32,11 +42,9 @@ public class Snake_Ladder
 			}
 			else 
 			{
-					//System.out.println(player_position);
-				System.out.println("Oops! Snake Bite Go To "+player_position+" Position.");
+					System.out.println("Oops! Snake Bite Go "+player_position+" Position Down.");
 			}
-			//System.out.println("Oops! Snake Bite Go To "+player_position+" Position.");
-			break;
+						break;
 		}
 
 	}
@@ -46,8 +54,8 @@ public class Snake_Ladder
 	public static void main(String[] args) 
 	{
 		System.out.println("Snake and Ladder game played with single player at start position 0");
-		int die = (int) ((Math.floor(Math.random() * 10)) % 6) + 1;
-		System.out.println("Rolling the die gives : " + die);
+		//int die = (int) ((Math.floor(Math.random() * 10)) % 6) + 1;
+		//System.out.println("Rolling the die gives : " + die); 
 		checkOptions();
 	}
 	
