@@ -9,6 +9,7 @@ public class Snake_Ladder
 
 	//User check for a option
 	public static void checkOptions() {
+		int counter = 0;
 		int player_position = 0;
 		while (player_position < winning) {
 		int die = (int) ((Math.floor(Math.random() * 10)) % 6) + 1;
@@ -44,10 +45,14 @@ public class Snake_Ladder
 			{
 					System.out.println("Oops! Snake Bite Go "+player_position+" Position Down.");
 			}
-						break;
+			break;
 		}
 
+	counter++;
+	System.out.println("Num of times "+counter);
 	}
+		System.out.println("Num of times "+counter);
+		
 }
 	
 
